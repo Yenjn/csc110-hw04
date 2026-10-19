@@ -15,11 +15,11 @@ def check_text():
     Otherwise print Try again and repeat input. """
     while True:
         text = input("Give me a sentence: ")
-        if text == secret_word:
+        if secret_word in text:
             print("You used the secret word!")
             break
-        if text == "dog" or text == "Dog":
-            print("You used the word \"dog\" or the word \"Dog\"")
+        if "dog" in text or "Dog" in text:
+            print("You used the word \"dog\" or the word \"Dog\"!")
             break
         else:
             print("Try again")
@@ -36,10 +36,10 @@ def check_greater():
         user1 = int(input("Give me a first integer: "))
         user2 = int(input("Give me a second integer: "))
         if user1 > user2:
-            print("First is Greater.")
+            print("First is Greater")
             break
         elif user1 < user2:
-            print("Second is Greater.")
+            print("Second is Greater")
             break
         else:
             print("Try again")
@@ -68,7 +68,8 @@ def my_for_loop():
     """ Get a string input. If length <=2 or >5 or contains space, return early.
     Otherwise loop over each character, print if each character is vowel or consonant. """
     string = str(input("Give me a string: "))
-    if len(string)<= 2 or len(string)> 5  or " " in string:
+    if len(string)< 2 or len(string)> 5  or " " in string:
+        print("bad word")
         return
     else:
         vowels = {"a", "e", "i", "o", "u"}
@@ -83,7 +84,7 @@ def my_while_loop():
     """ Menu with options a,b,c.
     a repeats menu, b prints Goodbye and returns, c exits program, other input prints Try again. """
     while True:
-        opt = input("Choose one option:a, b, or c: ")
+        opt = input("Choose one option: a, b, or c: ")
         if opt == "a":
             continue      
         elif opt == "b":
@@ -92,7 +93,7 @@ def my_while_loop():
         elif opt == "c":
             exit()
         else:
-            print("Try again")
+            print("try again")
     
         
 
